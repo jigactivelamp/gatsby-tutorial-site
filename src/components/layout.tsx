@@ -13,7 +13,7 @@ const Layout = ({
   children,
 }: {
   pageTitle: string;
-  children: JSX.Element;
+  children: React.ReactNode;
 }) => {
   return (
     <div className={container}>
