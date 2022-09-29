@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby";
 export const Seo = ({ title }: { title: string }) => {
   const {
     site: {
-      siteMetadata: { title: siteTitle = title },
+      siteMetadata: { title: siteTitle },
     },
   } = useStaticQuery(graphql`
     query SeoQuery {
@@ -16,7 +16,11 @@ export const Seo = ({ title }: { title: string }) => {
     }
   `);
 
-  return <title>{siteTitle}</title>;
+  return (
+    <title>
+      {title} | {siteTitle}
+    </title>
+  );
 };
 
 export default Seo;
