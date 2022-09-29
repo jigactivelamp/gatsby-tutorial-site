@@ -3,7 +3,6 @@ import { graphql } from "gatsby";
 import { Layout } from "../components";
 
 const BlogPage = ({ data }: any) => {
-  console.log(data);
   return (
     <Layout pageTitle="My Blog Posts">
       <ul>
